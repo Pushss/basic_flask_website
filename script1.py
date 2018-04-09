@@ -1,10 +1,14 @@
 from flask import Flask
 
-app=Flask(__name__)
+app=Flask(__name__) #instantiate objec/create instance(will get name of python script)
 
-@app.route('/')
+@app.route('/')#Decorator(sets home)
 def home():
-    return "Website content goes here!"
+    return "Website homepage!" #returns text
 
-if __name__ == "__main__":
-    app.run(debug=True)
+@app.route('/about/')#Decorator(sets about)
+def about():
+    return "This is the about page!" #returns text
+
+if __name__ == "__main__": #if script1.py equals __main__ then run.
+    app.run(debug=True)#runs app
