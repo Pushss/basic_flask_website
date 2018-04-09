@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 app=Flask(__name__) #instantiate object/create instance(will get name of python script)
+app.debug=True
 
 @app.route('/')#Decorator(sets home)
 def home():
